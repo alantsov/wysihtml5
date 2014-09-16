@@ -3812,6 +3812,7 @@ var wysihtml5 = {
 (function(factory, global) {
     if (typeof define == "function" && define.amd) {
         // AMD. Register as an anonymous module with a dependency on Rangy.
+        factory(window.rangy);
         define(["rangy"], factory);
         /*
          } else if (typeof exports == "object") {
@@ -4043,8 +4044,9 @@ var wysihtml5 = {
             removeMarkers: removeMarkers
         });
     });
-    
-}, this);;/*
+
+}, this);
+;/*
 	Base.js, version 1.1a
 	Copyright 2006-2010, Dean Edwards
 	License: http://www.opensource.org/licenses/mit-license.php
@@ -9550,7 +9552,6 @@ wysihtml5.quirks.ensureProperClearing = (function() {
  *    - to use custom tags
  *    - to detect and replace similar css classes via reg exp
  */
-
 (function(wysihtml5, rangy) {
   var defaultTagName = "span";
 
